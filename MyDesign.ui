@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyDesignClass</class>
+ <widget class="QMainWindow" name="MyDesignClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>艺哥的逆天之作</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>431</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>绘图板</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="DrawingWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>400</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="buttonClear">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>350</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空绘图板</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonLoad">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>390</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>加载模型</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRecognition">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>430</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>识别</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>20</y>
+      <width>131</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>620</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>DrawingWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">drawingwidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>clearWindow()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MyDesign.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonClear</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>clearWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>656</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonLoad</sender>
+   <signal>clicked()</signal>
+   <receiver>MyDesignClass</receiver>
+   <slot>load_module()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>703</x>
+     <y>-19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonRecognition</sender>
+   <signal>clicked()</signal>
+   <receiver>MyDesignClass</receiver>
+   <slot>recognition()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>743</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>load_module()</slot>
+  <slot>recognition()</slot>
+ </slots>
+</ui>

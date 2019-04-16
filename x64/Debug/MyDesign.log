@@ -1,0 +1,7 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(936,5): warning MSB8027: Two or more files with the name of moc_drawingwidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_drawingwidget.cpp, .\GeneratedFiles\Debug\moc_drawingwidget.cpp.
+  MyDesign.cpp
+MyDesign.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+j:\desktop\project\vs_proj\vsqt\mydesign___\mydesign\neure_network.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+x64\Debug\moc_drawingwidget.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  MyDesign.vcxproj -> J:\Desktop\project\VS_proj\VSqt\MyDesign___\x64\Debug\MyDesign.exe
+  MyDesign.vcxproj -> J:\Desktop\project\VS_proj\VSqt\MyDesign___\x64\Debug\MyDesign.pdb (Full PDB)
